@@ -1,9 +1,12 @@
 package leetcodePractice;
+/**
+ * 给出一个区间的集合，请合并所有重叠的区间
+ */
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class mergeRange56 {
+public class _056mergeRange {
     public static void main(String[] args) {
         ArrayList<ArrayList<Integer>> list = new ArrayList<ArrayList<Integer>>();
         //设置两个Scanner 第一个以行为单位读取数据

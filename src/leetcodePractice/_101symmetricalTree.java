@@ -1,6 +1,6 @@
 package leetcodePractice;
 
-public class symmetricalTree101 {
+public class _101symmetricalTree {
 
     //递归方法
     /*public boolean isSymmetric(sameTree100.TreeNode root){

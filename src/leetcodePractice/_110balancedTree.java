@@ -1,6 +1,6 @@
 package leetcodePractice;
 
-public class balancedTree110 {
+public class _110balancedTree {
     //自顶向下
     /*public boolean isBalanced(sameTree100.TreeNode root){
         if (root == null)
@@ -15,10 +15,10 @@ public class balancedTree110 {
     }*/
 
     //自底向上
-    public boolean isBalanced(sameTree100.TreeNode root){
+    public boolean isBalanced(_100sameTree.TreeNode root){
         return depth(root) != -1;
     }
-    private static int depth(sameTree100.TreeNode root){
+    private static int depth(_100sameTree.TreeNode root){
         if (root == null)
             return 0;
         if (depth(root.right)==-1)

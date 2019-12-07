@@ -1,7 +1,7 @@
 package leetcodePractice;
 
 
-public class sameTree100 {
+public class _100sameTree {
     public class TreeNode{
         int val;
         TreeNode left;

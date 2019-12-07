@@ -12,7 +12,7 @@ package leetcodePractice;
 
 import java.util.Scanner;
 
-public class letterSameOrNot242 {
+public class _242letterSameOrNot {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();

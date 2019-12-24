@@ -1,6 +1,6 @@
 package com.mypackage.algs4;
 
-import com.sun.jdi.Value;
+import jdk.internal.org.objectweb.asm.tree.analysis.Value;
 
 public class BST <Key extends Comparable<Key>,value> {
     private Node root;

@@ -7,6 +7,7 @@ public class ListNode {
     public ListNode(int val) {
         this.val = val;
     }
+
     public void setNext(ListNode next) {
         this.next = next;
     }

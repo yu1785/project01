@@ -7,6 +7,7 @@ import java.util.ArrayList;
  * 例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
  * 则依次打印出数字 1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10
  *
+ * 思路：设定上下左右边界 依次打印
  */
 public class Solution {
     public static void main(String[] args) {
@@ -19,10 +20,29 @@ public class Solution {
         ArrayList<Integer> list = new ArrayList<>();
         int row = matrix.length;
         int col = matrix[0].length;
-        for (int i = 0;i < row;i ++) {
-            for (int j = 0; j < col; j++) {
-                list.add(matrix[i][j]);
+        int up = 0,down = row-1,left = 0,right = col-1;
+        while (true){
+            for (int j = left; j <= right; j++) {
+                list.add(matrix[up][j]);
             }
+            up ++;
+            if (up > down)
+                break;
+            for (int i = up;i <= down;i ++)
+                list.add(matrix[i][right]);
+            right --;
+            if (left > right)
+                break;
+            for (int i = right;i >= left;i --)
+                list.add(matrix[down][i]);
+            down --;
+            if (up > down)
+                break;
+            for (int i = down;i >= up;i --)
+                list.add(matrix[i][left]);
+            left ++;
+            if (left > right)
+                break;
         }
         return list;
     }

@@ -6,6 +6,6 @@ package offerPractice._23二叉搜索树的后序遍历序列;
  */
 public class Solution {
     public boolean VerifySquenceOfBST(int [] sequence) {
-
+        return false;
     }
 }

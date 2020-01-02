@@ -47,7 +47,8 @@ public class TreeNode {
         System.out.print(obj+" ");
     }
     private Object getData() {
-        return data;
+//        return data;
+        return val;
     }
     public TreeNode getRoot() {
         return root;

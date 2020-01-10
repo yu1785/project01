@@ -1,4 +1,4 @@
-package myPractice.二叉树.二叉树的遍历.前序遍历.递归;
+package myPractice.二叉树.二叉树的遍历._1前序遍历.递归;
 
 import myPractice.二叉树.二叉树的遍历.TreeNodeDemo.TreeNode;
 

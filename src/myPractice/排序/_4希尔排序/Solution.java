@@ -31,6 +31,7 @@ public class Solution {
         int gap = len/2;
         while (gap > 0){
             for (int i = gap;i < len;i ++){
+                //插入排序
                 int current = array[i];
                 int preIndex = i-gap;
                 while (preIndex >= 0 && array[preIndex] > current){

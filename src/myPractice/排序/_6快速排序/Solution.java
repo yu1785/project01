@@ -44,7 +44,7 @@ public class Solution {
      * @param right
      * @return
      */
-    /*public static int partition(int[] array,int left,int right){
+    public static int partition(int[] array,int left,int right){
         int begin = left;
         int end = right;
         int key = right;
@@ -55,9 +55,9 @@ public class Solution {
                 end --;
             swap(array,begin,end);
         }
-        swap(array,begin,right);
+        swap(array,begin,key);
         return begin;
-    }*/
+    }
 
     /**
      * 交换数组内两个元素
@@ -85,7 +85,7 @@ public class Solution {
      * @param right
      * @return
      */
-    public static int partition(int[] array,int left,int right){
+    /*public static int partition(int[] array,int left,int right){
         int key = array[right];  //初始坑
         while (left < right){
             while (left < right && array[left] <= key)
@@ -97,5 +97,5 @@ public class Solution {
         }
         array[left] = key;
         return left;
-    }
+    }*/
 }

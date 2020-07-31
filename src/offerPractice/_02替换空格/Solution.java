@@ -20,7 +20,8 @@ public class Solution {
         String newStr = replaceSpace(str);
         System.out.println(newStr);
     }
-    public static String replaceSpace(StringBuffer str) {
+    // 方法一：不开辟新空间，对原字符串进行挪动
+    /*public static String replaceSpace(StringBuffer str) {
         int len = str.length();
         char[] ch = str.toString().toCharArray();
         int blank = 0;
@@ -47,5 +48,24 @@ public class Solution {
         }
 //        System.out.println(String.valueOf(ch));
         return String.valueOf(ch);  //字符数组转字符串 String.valueOf(ch)
+    }*/
+
+    // 方法一：开辟新空间
+    public static String replaceSpace(StringBuffer str){
+        // 1.调用自带函数
+//        return str.toString().replace(" ","%20");
+
+        // 2.开辟新空间 使用一个字符串存放结果 遇到空格" "就追加"%20"
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch == ' '){
+                res.append("%20");
+            }else {
+                res.append(ch);
+            }
+        }
+        return res.toString();
     }
+
 }

@@ -10,6 +10,11 @@ import java.util.List;
  * 说明：
  *      拆分时可以重复使用字典中的单词。
  *      你可以假设字典中没有重复的单词。
+ *
+ * 思路：
+ *      动态规划
+ *      dp[i]=dp[j] && check(s[j..i−1])
+ *      dp[i] 表示字符串 s 前 i 个字符组成的字符串
  */
 public class solution {
     public static void main(String[] args) {
@@ -18,6 +23,17 @@ public class solution {
         System.out.println(wordBreak(str,wordDict));
     }
     public static boolean wordBreak(String s, List<String> wordDict) {
-        return false;
+        boolean[] dp = new boolean[s.length()+1];
+        // 注意这里要对初始dp[0]赋值
+        dp[0] = true;
+        for (int i = 1; i <= s.length(); i++) {
+            for (int j = 0; j < i; j++) {
+                if (dp[j] && wordDict.contains(s.substring(j,i))){
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        return dp[s.length()];
     }
 }

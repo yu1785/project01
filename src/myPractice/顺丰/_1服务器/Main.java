@@ -37,11 +37,11 @@ public class Main {
             client[i][1] = sc.nextInt();
             sc.nextLine();
         }
-        int res = temp(serverB,client);
+        int res = fun(serverB,client);
         System.out.println(res);
     }
 
-    public static int temp(int[] value,int[][] client){
+    public static int fun(int[] value, int[][] client){
         Arrays.sort(value);
         Arrays.sort(client,(v1,v2)->{
             int v = v1[1]-v2[1];

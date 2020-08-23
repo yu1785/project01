@@ -90,7 +90,7 @@ public class Main {
         StringBuffer str1 = new StringBuffer(str);
         StringBuffer str2 = str1.reverse();
         // 注意由于StringBuilder没有重写equals函数  所以使用String.valueOf(str1)
-        if (String.valueOf(str1).equals(String.valueOf(str1)))
+        if (String.valueOf(str1).equals(String.valueOf(str2)))
             return true;
         return false;
     }

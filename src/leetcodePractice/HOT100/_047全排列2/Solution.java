@@ -35,6 +35,8 @@ public class Solution {
             }
             // 在46题的基础上添加下面两行代码
             // visited[i-1] 、!visited[i-1]都可以  但是没有不行 //todo
+            // 剪枝条件：i > 0 是为了保证 nums[i - 1] 有意义
+            // 写 !used[i - 1] 是因为 nums[i - 1] 在深度优先遍历的过程中刚刚被撤销选择
             if (i>0 && nums[i]==nums[i-1] && !visited[i-1])
                 continue;
             visited[i] = true;

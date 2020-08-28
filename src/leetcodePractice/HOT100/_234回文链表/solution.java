@@ -1,10 +1,6 @@
 package leetcodePractice.HOT100._234回文链表;
 
-import myPractice.二叉树.二叉树的遍历.TreeNodeDemo.TreeNode;
 import offerPractice.ListNodeDemo.ListNode;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author yu

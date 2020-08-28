@@ -25,7 +25,20 @@ public class Solution {
         else
             return Fibonacci(n-1)+Fibonacci(n-2);*/
 
-        //2.递归优化
+        // 2.递归优化
+        // 递归会重复计算大量相同数据，我们用个数组把结果存起来
+        // 时间复杂度：O(n)，空间复杂度：O(n)
+      /*  int ans[] = new int[40];
+        ans[0] = 0;
+        ans[1] = 1;
+        for(int i=2;i<=n;i++){
+            ans[i] = ans[i-1] + ans[i-2];
+        }
+        return ans[n];*/
+
+        // 3.继续优化
+        // 可以发现每次就用到了最近的两个数，所以我们可以只存储最近的两个数
+        // 时间复杂度：O(n)，空间复杂度：O(1)
         int num1 = 0;
         int num2 = 1;
         int sum = 0;

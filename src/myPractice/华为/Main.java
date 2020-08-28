@@ -1,9 +1,7 @@
 package myPractice.华为;
 
-import myPractice.二叉树.二叉树的遍历.TreeNodeDemo.TreeNode;
-import offerPractice.ListNodeDemo.ListNode;
+import myPractice.二叉树的遍历.TreeNodeDemo.TreeNode;
 
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 /**

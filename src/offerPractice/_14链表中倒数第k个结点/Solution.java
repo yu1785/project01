@@ -49,5 +49,22 @@ public class Solution {
         if (i < k)
             return null;
         return back;
+
+        ///
+        /*if (head==null || k==0)
+            return null;
+        ListNode before = head;
+        ListNode behind = head;
+        int count = 0;
+        while (before.next != null){
+            before = before.next;
+            count ++;
+            if (count >= k){
+                behind = behind.next;
+            }
+        }
+        if (count < k-1)
+            return null;
+        return behind;*/
     }
 }

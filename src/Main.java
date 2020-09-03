@@ -1,13 +1,16 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
 
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str = sc.next();
+        int n = sc.nextInt();
+        int m = sc.nextInt();
     }
 
-    public static void dfs(ArrayList<Integer> list){
+
+
+    /*public static void dfs(ArrayList<Integer> list){
         ArrayList<Integer> list1 = new ArrayList<>();
         ArrayList<Integer> list2 = new ArrayList<>();
         int n = list.size();
@@ -18,11 +21,8 @@ public class Main {
             }
         }
     }*/
-    public static void main(String[] args) {
-    }
 
-
-    public static TreeNode reConstructBinaryTree(int [] pre,int [] in) {
+    /*public static TreeNode reConstructBinaryTree(int [] pre,int [] in) {
         if (pre==null || in==null)
             return null;
         TreeNode root = new TreeNode(pre[0]);
@@ -35,7 +35,8 @@ public class Main {
             }
         }
         return root;
-    }
+    }*/
+
 }
 class ListNode{
     int val;

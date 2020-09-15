@@ -1,5 +1,6 @@
 package offerPractice._35数组中的逆序对;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -11,8 +12,37 @@ import java.util.Arrays;
  */
 public class Solution {
     public static void main(String[] args) {
-        int[] array = {1,2,3,4,5,6,7,0};
-        System.out.println(InversePairs(array));
+//        int[] array = {1,2,3,4,5,6,7,0};
+//        System.out.println(InversePairs(array));
+        int[] nums = {1,3,2,3,1};
+        System.out.println(reversePairs(nums));
+    }
+
+    public static int reversePairs(int[] nums) {
+        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> sortList = new ArrayList<>();
+        for (int nu:nums) {
+            list.add(nu);
+            if (!sortList.contains(nu))
+                sortList.add(nu);
+        }
+        int[] sortNum = sortList.stream().mapToInt(Integer::valueOf).toArray();;
+        Arrays.sort(sortNum);
+        StringBuffer str = new StringBuffer();
+        for (int nu:sortNum) {
+            str.append(nu);
+        }
+        int count = 0;
+        while (list.size() != 0){
+            int index = str.indexOf(list.get(0)+"");
+            count += index;
+            for (int i = 0; i < index; i++) {
+                if (!list.contains(sortNum[i]))
+                    count --;
+            }
+            list.remove(0);
+        }
+        return count;
     }
 
     /**

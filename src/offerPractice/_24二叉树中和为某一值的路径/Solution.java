@@ -53,7 +53,7 @@ public class Solution {
             /**
              * 调整顺序 使list数组长度大的数组靠前
              */
-            int length = listAll.size();
+            /*int length = listAll.size();
             if (listAll.size() > 1) {
                 for (int i = 0;i < length-1;i ++){
                     if (listAll.get(i).size() < listAll.get(length-1).size()){
@@ -64,7 +64,7 @@ public class Solution {
                         break;
                     }
                 }
-            }
+            }*/
         }
 
         /**

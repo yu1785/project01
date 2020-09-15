@@ -1,5 +1,7 @@
 package offerPractice._34第一个只出现一次的字符;
 
+import java.util.HashMap;
+
 /**
  * 在一个字符串(0<=字符串长度<=10000，全部由字母组成)中找到第一个只出现一次的字符,
  * 并返回它的位置,如果没有则返回 -1（需要区分大小写）
@@ -32,6 +34,18 @@ public class Solution {
         }
         return -1;
     }*/
+    public static int FirstNotRepeatingChar(String str) {
+        HashMap<Character,Boolean> map = new HashMap<>();
+        char[] chars = str.toCharArray();
+        for (char ch:chars) {
+            map.put(ch,!map.containsKey(ch));
+        }
+        for (char ch:chars) {
+            if (map.get(ch))
+                return str.indexOf(ch);
+        }
+        return -1;
+    }
 
     /**
      * 方法2：利用String类的方法
@@ -40,7 +54,7 @@ public class Solution {
      * @param str
      * @return
      */
-    public static int FirstNotRepeatingChar(String str) {
+    /*public static int FirstNotRepeatingChar(String str) {
         if (str.length()==0)
             return -1;
         for (int i = 0;i < str.length();i ++){
@@ -48,5 +62,5 @@ public class Solution {
                 return i;
         }
         return -1;
-    }
+    }*/
 }

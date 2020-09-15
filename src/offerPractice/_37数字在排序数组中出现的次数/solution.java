@@ -20,4 +20,20 @@ public class solution {
             count ++;
         return count;
     }
+
+    public static void main(String[] args) {
+        int[] arr = {1,3,3,3,3,4,5};
+        System.out.println(GetNumberOfK2(arr,2));
+    }
+    public static int GetNumberOfK2(int [] array , int k) {
+        StringBuffer str = new StringBuffer();
+        for (int arr:array) {
+            str.append(arr);
+        }
+        int first = str.indexOf(k+"");
+        int last = str.lastIndexOf(k+"");
+        if (first==-1 || last==-1)
+            return 0;
+        return last-first+1;
+    }
 }
